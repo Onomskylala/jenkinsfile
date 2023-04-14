@@ -1,13 +1,13 @@
 pipeline {
     agent any
     tools {
-        maven "put_your_mavenconfiguration_here"
-        jdk "put_your_mavenconfiguration_here"
+        maven "maven3"
+        jdk "jdk8"
     }
     stages{
         stage('Fetch code') {
           steps{
-              git branch: 'put_your_git_branch_here', url:'https://github.com/xxxx/xxxx.git'
+              git branch: 'main'
           }  
         }
         stage('Build') {
