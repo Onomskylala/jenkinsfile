@@ -7,7 +7,7 @@ pipeline {
     stages{
         stage('Fetch code') {
           steps{
-              git branch: 'main'
+              git branch: 'main', url: 'https://github.com/Onomskylala/jenkinsfile.git'
           }  
         }
         stage('Build') {
